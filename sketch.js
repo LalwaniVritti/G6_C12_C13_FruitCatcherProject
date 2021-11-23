@@ -5,7 +5,7 @@ var basket,basketImg;
 var fruitGroup;
 var fruit1_img, fruit2_img, fruit3_img, fruit4_img, fruit5_img;
 var player_img;
-var score = 0;
+
 
 
 function preload(){
@@ -41,13 +41,10 @@ function draw() {
     for(var i =0;i<fruitsGroup.length;i++){
       if(fruitsGroup.get(i).isTouching(basket)){
         fruitsGroup.get(i).destroy();
-        score=score+1;
       }
     }
     
-  textSize(20);
-  fill("brown");
-  text("Score : " + score, 350,50);
+ 
   
   drawSprites();
 }
